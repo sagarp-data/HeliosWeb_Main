@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Helios Example</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #netviz {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #f0e68c;
+      }
+      #node-details {
+      position: absolute;
+      top: 5px; /* Adjust as needed */
+      left: 10px; /* Adjust as needed */
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+      width: 150px; /* Fixed width */
+      height: 150 px; /* Adjust height based on content */
+      max-height: 400px; /* Maximum height to prevent overflow */
+      overflow-y: auto; /* Scrollbar for overflowing content */
+      font-size: 12px; /* Font size for better readability */
+      color: white;
+    }
+    #node-details h2 {
+        margin-top: 0; /* Remove extra space at the top of h2 */
+      }
+    #node-details p {
+      margin: 3x 0; /* Space between lines */
+    }
+    #legend {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        width: 100px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .legend-icon {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .legend-text {
+      font-size: 11px;
+      color: white;
+    }
+    </style>
+  </head>  
+  <body>
+    <div id="netviz"></div>
+    <div id="node-details">
+      <h2>Node Details</h2>
+      <hr></hr>
+      <p id="node-id"><strong>Node ID:</strong> </p>
+      <p id="node-sentence"><strong>Sentence:</strong> </p>
+      <p id="node-score"><strong>Sentiment Score:</strong> </p>
+    </div>
+    <div id="legend">
+      <div class="legend-item">
+        <div class="legend-text">Sentiment Scores</div>
+      </div>
+      <hr></hr>
+      <div class="legend-item">
+        <div class="legend-icon" style="background-color: green;"></div>
+        <div class="legend-text">Positive</div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-icon" style="background-color: red;"></div>
+        <div class="legend-text">Negative</div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-icon" style="background-color: grey;"></div>
+        <div class="legend-text">Neutral</div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
